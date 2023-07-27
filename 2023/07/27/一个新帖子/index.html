@@ -242,7 +242,7 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/07/26/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90/" itemprop="url">
+	<a href="/2023/07/27/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90/" itemprop="url">
 		做一个只属于自己的博客
 	</a>
 
@@ -259,8 +259,8 @@
 
 	Updated on
 
-	<a href="/2023/07/26/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90/" itemprop="url">
-		<time datetime="2023-07-26T13:47:36.000Z" itemprop="dateUpdated">
+	<a href="/2023/07/27/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90/" itemprop="url">
+		<time datetime="2023-07-27T05:57:36.000Z" itemprop="dateUpdated">
 	  		2023-07-27
 	  </time>
 	</a> 
@@ -329,65 +329,44 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh #检查本机已存在的ssh密钥</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如果提示：No such file or directory 说明你是第一次使用git。</li>
-</ul>
+<p>如果提示：No such file or directory 说明你是第一次使用git。</p>
 <p>接着输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “邮件地址”</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件</p>
+<p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件</p>
 <p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727105849524.png" alt="image-20230727105849524"></p>
 <p>记事本打开并复制里面的内容，打开你的github主页，进入个人设置 </p>
-<p><img src="/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90.assets/image-20230727111406892.png" alt="image-20230727111406892"></p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111406892.png" alt="image-20230727111406892"></p>
 <p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111627754.png" alt="image-20230727111627754"></p>
 <p>找到SSH and GPG keys，新建SSH key：</p>
-</li>
-</ul>
 <p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111930723.png" alt="image-20230727111930723"></p>
 <p>把前面.ssh\id_rsa.pub文件里复制的内容粘贴到Key里面，取个标题，添加 SSH KEY</p>
 <p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727112248871.png" alt="image-20230727112248871"></p>
-<ul>
-<li>尝试ssh连接,测试是否成功</li>
-</ul>
+<p>尝试ssh连接,测试是否成功</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</li>
-</ul>
+<p>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>在选中的位置(blog目录下)打开cmd(以管理员身份)</li>
-</ul>
+<p>在选中的位置(blog目录下)打开cmd(以管理员身份)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>在上一个<code>Git Bash Here</code>还需要继续配置</li>
-</ul>
+<p>在上一个<code>Git Bash Here</code>还需要继续配置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config –global user.name “luozhixiaowo”// 你的github用户名，非昵称</span><br><span class="line">git config –global user.email “xxx@qq.com“// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
 
 <ol start="6">
 <li>准备上传代码</li>
 </ol>
-<ul>
-<li>在github上新建一个存储库，命名为<code>github的用户名.github.io</code></li>
-<li>编辑_config.yml文件，在最后改成这样</li>
-</ul>
+<p>在github上新建一个存储库，命名为<code>github的用户名.github.io</code></p>
+<p>编辑_config.yml文件，在最后改成这样</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:luozhixiaowo/luozhixiaowo.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>注意保持格式，缩进不对，会导致一会儿，上传不成功</p>
-</li>
-<li><p>最后上传，输入：</p>
-</li>
-</ul>
+<p>注意保持格式，缩进不对，会导致一会儿，上传不成功</p>
+<p>最后上传，输入：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line">每次上传成功之后，需要等待1-3分钟，用来刷新页面</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727132837510.png" alt="image-20230727132837510"></p>
-<ul>
-<li>在创建的存储库的设置中-pages-如图设置</li>
-</ul>
+<p>在创建的存储库的设置中-pages-如图设置</p>
 <p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727132916544.png" alt="image-20230727132916544"></p>
 <ol start="7">
 <li>hexo命令介绍</li>
