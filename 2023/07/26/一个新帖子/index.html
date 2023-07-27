@@ -261,7 +261,7 @@
 
 	<a href="/2023/07/26/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90/" itemprop="url">
 		<time datetime="2023-07-26T13:47:36.000Z" itemprop="dateUpdated">
-	  		2023-07-26
+	  		2023-07-27
 	  </time>
 	</a> 
 
@@ -300,9 +300,106 @@
 </ol>
 <h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ol>
 <li>在本地找个目录放博客源文件，路径不能有中文</li>
-<li>在选定的目录中</li>
+<li>在选定的目录中，右键空白处，点击Open Git Bash Here，出现如下图：</li>
 </ol>
-	
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727102037071.png" alt="image-20230727102037071"></p>
+<ol start="3">
+<li><p>使用npm命令安装Hexo，输入：</p>
+<pre><code> npm install -g hexo-cli
+ hexo init blog
+ cd blog
+ hexo g
+</code></pre>
+</li>
+</ol>
+<p>​    构建好的效果：            </p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727102250323.png" alt="image-20230727102250323"></p>
+<ol start="4">
+<li><p>cd进入此目录，把红框内蓝色区域改成CMD：</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727102853917.png" alt="image-20230727102853917"></p>
+</li>
+</ol>
+<p>​    回车运行,出现下图：</p>
+<p>   <img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727103826284.png" alt="image-20230727103826284"></p>
+<p>为了检测我们的网站雏形，分别按顺序依次输入以下三条命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">之后就可以访问127.0.0.1:4000访问blog了</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>配置ssh</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh #检查本机已存在的ssh密钥</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果提示：No such file or directory 说明你是第一次使用git。</li>
+</ul>
+<p>接着输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “邮件地址”</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727105849524.png" alt="image-20230727105849524"></p>
+<p>记事本打开并复制里面的内容，打开你的github主页，进入个人设置 </p>
+<p><img src="/%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B8%96%E5%AD%90.assets/image-20230727111406892.png" alt="image-20230727111406892"></p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111627754.png" alt="image-20230727111627754"></p>
+<p>找到SSH and GPG keys，新建SSH key：</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111930723.png" alt="image-20230727111930723"></p>
+<p>把前面.ssh\id_rsa.pub文件里复制的内容粘贴到Key里面，取个标题，添加 SSH KEY</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727112248871.png" alt="image-20230727112248871"></p>
+<ul>
+<li>尝试ssh连接,测试是否成功</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在选中的位置(blog目录下)打开cmd(以管理员身份)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在上一个<code>Git Bash Here</code>还需要继续配置</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config –global user.name “luozhixiaowo”// 你的github用户名，非昵称</span><br><span class="line">git config –global user.email “xxx@qq.com“// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>准备上传代码</li>
+</ol>
+<ul>
+<li>在github上新建一个存储库，命名为<code>github的用户名.github.io</code></li>
+<li>编辑_config.yml文件，在最后改成这样</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:luozhixiaowo/luozhixiaowo.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>注意保持格式，缩进不对，会导致一会儿，上传不成功</p>
+</li>
+<li><p>最后上传，输入：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line">每次上传成功之后，需要等待1-3分钟，用来刷新页面</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727132837510.png" alt="image-20230727132837510"></p>
+<ul>
+<li>在创建的存储库的设置中-pages-如图设置</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727132916544.png" alt="image-20230727132916544"></p>
+<ol start="7">
+<li>hexo命令介绍</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>hexo目录结构</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+– .deploy #hexo deploy生成的文件</span><br><span class="line">+– node_modules #npm组件</span><br><span class="line">+– public #生成的静态网页文件</span><br><span class="line">+–scaffolds #模板</span><br><span class="line">+– source #博客正文和其他源文件</span><br><span class="line">| +– _posts #我们自己写的文章以md结尾</span><br><span class="line">+– themes #主题</span><br><span class="line">+– _config.yml #全局配置文件</span><br><span class="line">– package.json #定义了hexo所需要的各种模块</span><br></pre></td></tr></table></figure>
+
+<h3 id="这样，简单的博客就已经做出来了！！"><a href="#这样，简单的博客就已经做出来了！！" class="headerlink" title="这样，简单的博客就已经做出来了！！"></a>这样，简单的博客就已经做出来了！！</h3>	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
