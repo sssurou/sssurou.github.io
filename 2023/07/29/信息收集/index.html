@@ -269,7 +269,7 @@
 
 	<a href="/2023/07/29/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" itemprop="url">
 		<time datetime="2023-07-28T16:00:00.000Z" itemprop="dateUpdated">
-	  		2023-07-31
+	  		2023-08-04
 	  </time>
 	</a> 
 
@@ -312,15 +312,69 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h2 id="首先，我们得先了解信息收集是什么？"><a href="#首先，我们得先了解信息收集是什么？" class="headerlink" title="首先，我们得先了解信息收集是什么？"></a>首先，我们得先了解信息收集是什么？</h2><p>​        信息收集（Information Gathering）是指通过各种方式获取所需要的信息。信息收集是信息得以利用的第一步，也是关键的一步。信息收集工作的好坏，直接关系到整个信息管理工作的质量。</p>
+			<h2 id="首先，我们得先了解信息收集是什么？"><a href="#首先，我们得先了解信息收集是什么？" class="headerlink" title="首先，我们得先了解信息收集是什么？"></a>首先，我们得先了解信息收集是什么？</h2><p>​        信息收集（Information Gathering）是指通过各种方式获取所需要的信息。信息收集是信息得以利用的第一步，也是关键的一步。信息收集工作的好坏，直接关系到整个信息管理工作的质量。信息收集，其实也就是资产收集</p>
 <h2 id="对我们来说最重要的，当然是如何能够快速的收集到自己想要的东西"><a href="#对我们来说最重要的，当然是如何能够快速的收集到自己想要的东西" class="headerlink" title="对我们来说最重要的，当然是如何能够快速的收集到自己想要的东西"></a>对我们来说最重要的，当然是如何能够快速的收集到自己想要的东西</h2><h4 id="以下推荐一些有用的工具或网站"><a href="#以下推荐一些有用的工具或网站" class="headerlink" title="以下推荐一些有用的工具或网站"></a>以下推荐一些有用的工具或网站</h4><h5 id="了解企业的基本信息"><a href="#了解企业的基本信息" class="headerlink" title="了解企业的基本信息"></a>了解企业的基本信息</h5><ol>
 <li>域名注册信息 ： <a target="_blank" rel="noopener" href="https://whois.chinaz.com、https//www.whois.com/whois">https://whois.chinaz.com、https://www.whois.com/whois</a></li>
 <li>企业注册信息 ： <a target="_blank" rel="noopener" href="https://aiqicha.baidu.com、https//www.qcc.com/">https://aiqicha.baidu.com、https://www.qcc.com/</a></li>
 </ol>
+<p>获得统一社会信用代码、工商注册号、法定代表人、电话、邮箱、官网、地址等信息</p>
+<h5 id="通过在命令行中使用PING命令可以获取这个网站的IP"><a href="#通过在命令行中使用PING命令可以获取这个网站的IP" class="headerlink" title="通过在命令行中使用PING命令可以获取这个网站的IP"></a>通过在命令行中使用PING命令可以获取这个网站的IP</h5><p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804171705113.png" alt="image-20230804171705113"></p>
 <h5 id="CDN（内容分发网络）能使用户就近获取内容，降低网络拥塞，提高用户访问速度和命中率"><a href="#CDN（内容分发网络）能使用户就近获取内容，降低网络拥塞，提高用户访问速度和命中率" class="headerlink" title="CDN（内容分发网络）能使用户就近获取内容，降低网络拥塞，提高用户访问速度和命中率"></a>CDN（内容分发网络）能使用户就近获取内容，降低网络拥塞，提高用户访问速度和命中率</h5><h5 id="但在安全测试过程中，如果目标存在CDN，则会影响测试过程。所以我们需要："><a href="#但在安全测试过程中，如果目标存在CDN，则会影响测试过程。所以我们需要：" class="headerlink" title="但在安全测试过程中，如果目标存在CDN，则会影响测试过程。所以我们需要："></a>但在安全测试过程中，如果目标存在CDN，则会影响测试过程。所以我们需要：</h5><ol>
 <li>分辨是否使用CDN ：多地PING  <a target="_blank" rel="noopener" href="https://ping.chinaz.com/">https://ping.chinaz.com</a></li>
-<li>绕过CDN查询真实IP ： fuckcdn工具、nslookup、<a target="_blank" rel="noopener" href="https://dnsdumpster.com(dns解析记录)、https//crt.sh">https://dnsdumpster.com（DNS解析记录）、https://crt.sh</a>  （证书查询IP）、<a target="_blank" rel="noopener" href="https://www.dnsdb.io/">https://www.dnsdb.io</a> （DNS解析内容）、<a target="_blank" rel="noopener" href="https://fofa.info/">https://fofa.info</a> 、<a target="_blank" rel="noopener" href="https://intelx.io/">https://intelx.io</a> （可以搜索邮箱服务器）</li>
+<li>绕过CDN查询真实IP ： fuckcdn工具、nslookup（能直接在windows系统用的命令行工具）、<a target="_blank" rel="noopener" href="https://dnsdumpster.com(dns解析记录)、https//crt.sh">https://dnsdumpster.com（DNS解析记录）、https://crt.sh</a>  （证书查询IP）、<a target="_blank" rel="noopener" href="https://www.dnsdb.io/">https://www.dnsdb.io</a> （DNS解析内容）、<a target="_blank" rel="noopener" href="https://fofa.info/">https://fofa.info</a> 、<a target="_blank" rel="noopener" href="https://intelx.io/">https://intelx.io</a> （可以搜索邮箱服务器）</li>
 <li>子域名爆破 ： <a target="_blank" rel="noopener" href="http://z.zcjun.com/">http://z.zcjun.com</a></li>
+</ol>
+<h6 id="通过IP扫描开放端口"><a href="#通过IP扫描开放端口" class="headerlink" title="通过IP扫描开放端口"></a>通过IP扫描开放端口</h6><ol>
+<li>Nmap（一种渗透测试工具，在kali里边打开终端输入指令进行操作）</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804163829608.png" alt="image-20230804163829608"></p>
+<ol start="2">
+<li>御剑端口扫描</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804163938678.png" alt="image-20230804163938678"></p>
+<ol start="3">
+<li>百度在线端口扫描  <a target="_blank" rel="noopener" href="http://duankou.wlphp.com/">http://duankou.wlphp.com</a></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804164309251.png" alt="image-20230804164309251"></p>
+<h5 id="子域名挖掘"><a href="#子域名挖掘" class="headerlink" title="子域名挖掘"></a>子域名挖掘</h5><ol>
+<li>子域名挖掘机</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804164801231.png" alt="image-20230804164801231"></p>
+<ol start="2">
+<li><p>在线子域名爆破  <a target="_blank" rel="noopener" href="http://z.zcjun.com/">http://z.zcjun.com</a></p>
+</li>
+<li><p>subDomainBrute(一种子域名扫描命令行工具)</p>
+</li>
+</ol>
+<p>步骤：进入kali，在subDomainBrute工具所在的文件夹下打开终端输入指令如图:</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804165104920.png" alt="image-20230804165104920"></p>
+<p>会在subDomainBrute文件夹里边生成一个hnie.edu.cn.txt文件，数据在此文件中</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804165124710.png" alt="image-20230804165124710"></p>
+<ol start="4">
+<li>OneFoAll（也是一种进行扫描的命令行工具）</li>
+</ol>
+<p>步骤：进入kali，在oneforall工具所在的文件夹下打开终端输入指令如图:</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804165245851.png" alt="image-20230804165245851"></p>
+<p>生成的数据结果会在result文件夹里边</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804165302105.png" alt="image-20230804165302105"></p>
+<p>前面跑百度数据太多了，所以又改成跑hnie.edu.cn了，所以数据都在下图文件里（此文件用WPS打开看的更舒服点）</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230804165329858.png" alt="image-20230804165329858"></p>
+<h5 id="敏感目录扫描"><a href="#敏感目录扫描" class="headerlink" title="敏感目录扫描"></a>敏感目录扫描</h5><ol>
+<li><p>御剑后台扫描工具</p>
+</li>
+<li><p>小米范web目录扫描</p>
+</li>
+<li><p>dirsearch（需安装在kali，一种命令行工具）</p>
+</li>
+<li><p>dirb（kali自带的目录扫描命令行工具）</p>
+</li>
+</ol>
+<h5 id="一些网络空间搜索引擎"><a href="#一些网络空间搜索引擎" class="headerlink" title="一些网络空间搜索引擎"></a>一些网络空间搜索引擎</h5><ol>
+<li>FOFA: <a target="_blank" rel="noopener" href="https://fofa.info/">https://fofa.info</a></li>
+<li>钟馗之眼(zoomeye):<a target="_blank" rel="noopener" href="https://www.zoomeye.org/">https://www.zoomeye.org</a></li>
+<li>qax鹰图平台:<a target="_blank" rel="noopener" href="https://hunter.qianxin.com/">https://hunter.qianxin.com</a></li>
+<li>360quake:<a target="_blank" rel="noopener" href="https://quake.360.net/">https://quake.360.net</a></li>
+<li>shodan:<a target="_blank" rel="noopener" href="https://www.shodan.io/">https://www.shodan.io</a></li>
 </ol>
 	
 		</div>
@@ -363,6 +417,28 @@
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/08/04/page/" title="page">
+								page			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 4日, 2023				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/08/04/page/" title="page">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="page"/>
+							</a>
+						</div>
+					</li>												
 			
 					<li>
 						<div class="relate-post-text">
