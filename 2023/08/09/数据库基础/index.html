@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      做一个只属于自己的博客 | sssurou的博客
+      数据库基础 | sssurou的博客
     
   </title>
   <meta name="author" content="sssure">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「做一个只属于自己的博客」
+			「数据库基础」
 		
 	</p>
 
@@ -250,8 +250,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-		做一个只属于自己的博客
+	<a href="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" itemprop="url">
+		数据库基础
 	</a>
 
 		</div>
@@ -267,9 +267,9 @@
 
 	更新于
 
-	<a href="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">
-		<time datetime="2023-07-27T05:57:36.000Z" itemprop="dateUpdated">
-	  		2023-07-28
+	<a href="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" itemprop="url">
+		<time datetime="2023-08-09T09:19:58.000Z" itemprop="dateUpdated">
+	  		2023-08-09
 	  </time>
 	</a> 
 
@@ -280,8 +280,8 @@
 				
 	<i class="icon-price-tags"></i>
 	
-		<a href="/tags/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" class=" ">
-			搭建自己的博客
+		<a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/" class=" ">
+			知识点
 		</a>
 	
 		
@@ -290,7 +290,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/_visitors" data-url="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-title="做一个只属于自己的博客">
+    <span class="leancloud_visitors" id="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/_visitors" data-url="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" data-title="数据库基础">
        	<i class="icon-eye"></i>
        	热度
         
@@ -302,7 +302,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/_likes" data-url="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-title="做一个只属于自己的博客" rel="unlike">
+    <span class="leancloud_likes" id="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/_likes" data-url="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" data-title="数据库基础" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -312,102 +312,27 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h1 id="利用github搭建hexo博客"><a href="#利用github搭建hexo博客" class="headerlink" title="利用github搭建hexo博客"></a>利用github搭建hexo博客</h1><h2 id="准备前提"><a href="#准备前提" class="headerlink" title="准备前提"></a>准备前提</h2><ol>
-<li>提前安装好(node.js)，打开[<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a>]，选择左边那个</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230726215645673.png" alt="image-20230726215645673"></p>
-<ol start="2">
-<li>提前安装好(Git)[<a target="_blank" rel="noopener" href="https://git-scm.com/downloads]">https://git-scm.com/downloads]</a></li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230726220127253.png" alt="image-20230726220127253"></p>
-<ol start="3">
-<li>提前注册好一个github账号，进入github官网（github.com）进行注册</li>
-<li>如果文章图片没有显示，请自行挂代理</li>
-</ol>
-<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ol>
-<li>在本地找个目录放博客源文件，路径不能有中文</li>
-<li>在选定的目录中，右键空白处，点击Open Git Bash Here，出现如下图：</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727102037071.png" alt="image-20230727102037071"></p>
-<ol start="3">
-<li><p>使用npm命令安装Hexo，输入：</p>
-<pre><code> npm install -g hexo-cli
- hexo init blog
- cd blog
- hexo g
-</code></pre>
-</li>
-</ol>
-<p>​    构建好的效果：            </p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727102250323.png" alt="image-20230727102250323"></p>
-<ol start="4">
-<li><p>cd进入此目录，把红框内蓝色区域改成CMD：</p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727102853917.png" alt="image-20230727102853917"></p>
-</li>
-</ol>
-<p>​    回车运行,出现下图：</p>
-<p>   <img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727103826284.png" alt="image-20230727103826284"></p>
-<p>为了检测我们的网站雏形，分别按顺序依次输入以下三条命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">之后就可以访问127.0.0.1:4000访问blog了</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>配置ssh</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh #检查本机已存在的ssh密钥</span><br></pre></td></tr></table></figure>
-
-<p>如果提示：No such file or directory 说明你是第一次使用git。</p>
-<p>接着输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “邮件地址”</span><br></pre></td></tr></table></figure>
-
-<p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件</p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727105849524.png" alt="image-20230727105849524"></p>
-<p>记事本打开并复制里面的内容，打开你的github主页，进入个人设置 </p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111406892.png" alt="image-20230727111406892"></p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111627754.png" alt="image-20230727111627754"></p>
-<p>找到SSH and GPG keys，新建SSH key：</p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727111930723.png" alt="image-20230727111930723"></p>
-<p>把前面.ssh\id_rsa.pub文件里复制的内容粘贴到Key里面，取个标题，添加 SSH KEY</p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727112248871.png" alt="image-20230727112248871"></p>
-<p>尝试ssh连接,测试是否成功</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
-
-<p>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-
-<p>在选中的位置(blog目录下)打开cmd(以管理员身份)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure>
-
-<p>在上一个<code>Git Bash Here</code>还需要继续配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config –global user.name “luozhixiaowo”// 你的github用户名，非昵称</span><br><span class="line">git config –global user.email “xxx@qq.com“// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>准备上传代码</li>
-</ol>
-<p>在github上新建一个存储库，命名为<code>github的用户名.github.io</code></p>
-<p>编辑_config.yml文件，在最后改成这样</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:luozhixiaowo/luozhixiaowo.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<p>注意保持格式，缩进不对，会导致一会儿，上传不成功</p>
-<p>最后上传，输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line">每次上传成功之后，需要等待1-3分钟，用来刷新页面</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727132837510.png" alt="image-20230727132837510"></p>
-<p>在创建的存储库的设置中-pages-如图设置</p>
-<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230727132916544.png" alt="image-20230727132916544"></p>
-<ol start="7">
-<li>hexo命令介绍</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
-<li>hexo目录结构</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+– .deploy #hexo deploy生成的文件</span><br><span class="line">+– node_modules #npm组件</span><br><span class="line">+– public #生成的静态网页文件</span><br><span class="line">+–scaffolds #模板</span><br><span class="line">+– source #博客正文和其他源文件</span><br><span class="line">| +– _posts #我们自己写的文章以md结尾</span><br><span class="line">+– themes #主题</span><br><span class="line">+– _config.yml #全局配置文件</span><br><span class="line">– package.json #定义了hexo所需要的各种模块</span><br></pre></td></tr></table></figure>
-
-<h3 id="这样，简单的博客就已经做出来了！！"><a href="#这样，简单的博客就已经做出来了！！" class="headerlink" title="这样，简单的博客就已经做出来了！！"></a>这样，简单的博客就已经做出来了！！</h3>	
+			<h1 id="数据库基础"><a href="#数据库基础" class="headerlink" title="数据库基础"></a>数据库基础</h1><h3 id="什么是数据库？"><a href="#什么是数据库？" class="headerlink" title="什么是数据库？"></a>什么是数据库？</h3><p>​		数据库（database，又名电子化的文件柜）就是存储数据的仓库。数据库是一个以某种有结构的有顺序存储的 数据集合，理解数据库的一种最简单的办法是将其想象为一个文件柜。此文件柜是一个 存放数据的物理位置，不管数据是什么以及如何组织的。</p>
+<h3 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h3><p>​		数据库管理系统是为管理<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93?fromModule=lemma_inlink">数据库</a>而设计的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%94%B5%E8%84%91%E8%BD%AF%E4%BB%B6/1711577?fromModule=lemma_inlink">电脑软件</a>系统，是数据库系统的核心组成部分主要完成对数据库的操作与管理功能，实现数据库对象的创建、数据库存储数据的查询、添加、修改与删除操作和数据库的用户管理、权限管理等。</p>
+<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><h5 id="关系数据库"><a href="#关系数据库" class="headerlink" title="关系数据库"></a>关系数据库</h5><p>​		关系型数据库，存储的格式可以直观地反映实体间的关系。关系型数据库和常见的表格比较相似，关系型数据库中表与表之间是有很多复杂的关联关系的。 常见的关系型数据库有<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Mysql/471251?fromModule=lemma_inlink">Mysql</a>，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/SqlServer/463101?fromModule=lemma_inlink">SqlServer</a>等。在轻量或者小型的应用中，使用不同的关系型数据库对系统的性能影响不大，但是在构建大型应用时，则需要根据应用的业务需求和性能需求，选择合适的关系型数据库。</p>
+<h5 id="非关系型数据库（NoSQL）"><a href="#非关系型数据库（NoSQL）" class="headerlink" title="非关系型数据库（NoSQL）"></a>非关系型数据库（NoSQL）</h5><p>​		指的是分布式的、非关系型的、不保证遵循<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ACID/10738?fromModule=lemma_inlink">ACID</a>原则的数据存储系统。适合追求速度和可扩展性、业务多变的应用场景。现在有四种大的分类：</p>
+<p>（1）键值对存储（key-value）：代表软件Redis，它的优点能够进行数据的快速查询，而缺点是需要存储数据之间的关系。</p>
+<p>（2）列存储：代表软件Hbase，它的优点是对数据能快速查询，数据存储的扩展性强。而缺点是数据库的功能有局限性。</p>
+<p>3）文档数据库存储：代表软件MongoDB，它的优点是对数据结构要求不特别的严格。而缺点是查询性的性能不好，同时缺少一种统一查询语言。</p>
+<p>（4）图形数据库存储：代表软件InfoGrid，它的优点可以方便的利用图结构相关算法进行计算。而缺点是要想得到结果必须进行整个图的计算，而且遇到不适合的数据模型时，图形数据库很难使用。</p>
+<h3 id="NoSQL-与关系型数据库的区别"><a href="#NoSQL-与关系型数据库的区别" class="headerlink" title="NoSQL 与关系型数据库的区别"></a>NoSQL 与关系型数据库的区别</h3><h5 id="存储方式"><a href="#存储方式" class="headerlink" title="存储方式"></a>存储方式</h5><p>​		传统的关系型数据库采用表格的储存方式， 数据以行和列的方式进行存储，要读取和查询都十分方便。而非关系型数据不适合这样的表格存储方式，通常以数据集的方式，大量的数据集中存储在一起，类似于键值对、图结构或者文档。</p>
+<h5 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h5><p>​		关系型数据库按照<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BB%93%E6%9E%84%E5%8C%96/22244423?fromModule=lemma_inlink">结构化</a>的方法存储数据，先定义好表的结构再，根据表的结构存入数据，整个数据表的可靠性和稳定性都比较高，但一旦存入数据后，修改数据表的结构就会十分困难。而NoSQL数据库由于面对的是大量非结构化的数据的存储，可以根据数据存储的需要灵活的改变数据库的结构。</p>
+<h5 id="存储规范"><a href="#存储规范" class="headerlink" title="存储规范"></a>存储规范</h5><p>​		关系型数据库为了避免重复、规范化数据以及充分利用好存储空间，把数据按照最小关系表的形式进行存储，这样数据管理的就可以变得很清晰、一目了然，但随着数据表数量的增加，由于数据涉及到多张<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%A1%A8/3490603?fromModule=lemma_inlink">数据表</a>，数据表之间存在着复杂的关系，数据管理会越来越复杂。而NoSQL数据库的数据存储方式是用平面数据集的方式集中存放，虽然会存在数据被重复存储，从而造成存储空间被浪费的问题，但是由于基本上单个数据库都是采用单独存放的形式，很少采用分割存放的方式，所以这样数据往往能存成一个整体，这对于数据的读写提供了极大的方便。</p>
+<h5 id="扩展方式"><a href="#扩展方式" class="headerlink" title="扩展方式"></a>扩展方式</h5><p>​		关系型数据库只具备纵向扩展能力，只能通过提高处理能力，也就是选择速度更快性能更高的计算机，来进行拓展空间，局限性也大。NoSQL数据库采用横向的方式来开展数据库，也就是可以添加更多<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8/613818?fromModule=lemma_inlink">数据库服务器</a>到资源池，然后由这些增加的服务器来负担数据量增加的开销。</p>
+<h5 id="查询方式"><a href="#查询方式" class="headerlink" title="查询方式"></a>查询方式</h5><p>​		关系型数据库采用结构化查询语言（即SQL）来对数据库进行查询。SQL采用的是非结构化查询语言（UnQL），也可以采用类似索引的方法来加快查询操作。</p>
+<h5 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h5><p>​		可以利用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ORM/3583252?fromModule=lemma_inlink">ORM</a>层（也就是对象关系映射）来将数据库中对象模型映射到基于SQL的关系型数据库中去以及进行不同类型系统的数据之间的转换。对于NoSQL数据库则没有这方面的问题，它不需要规范化数据，它通常是在一个单独的存储单元中存入一个复杂的数据实体。</p>
+<h5 id="事务性"><a href="#事务性" class="headerlink" title="事务性"></a>事务性</h5><p>​		关系型数据库可以满足对事务性要求较高或者需要进行复杂数据查询的数据操作，而且可以充分满足数据库操作的高性能和操作稳定性的要求。NoSQL数据库虽然对于事务操作也可以使用，但不能很好的支持，很难满足其全部的需求。</p>
+<h5 id="读写性能"><a href="#读写性能" class="headerlink" title="读写性能"></a>读写性能</h5><p>​		关系型数据库十分强调数据的一致性，并为此降低读写性能付出了巨大的代价，面对海量数据的处理的时候效率就会变得很差。而NoSQL数据库恰恰是应对大数据方面，也就是对于大量的每天都产生非结构化的数据能够高性能的读写。</p>
+<h5 id="授权方式"><a href="#授权方式" class="headerlink" title="授权方式"></a>授权方式</h5><p>关系型数据库常见的有Oracle，SQLServer，DB2，Mysql，除了Mysql大多数的关系型数据库如果要使用都需要支付一笔价格高昂的费用，即使是免费的Mysql性能也受到了诸多的限制。而对于NoSQL数据库，比较主流的有redis，HBase，MongoDb，memcache等产品，通常都采用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BC%80%E6%BA%90/20720669?fromModule=lemma_inlink">开源</a>的方式，不需要像关系型数据库那样，需要一笔高昂的花费。</p>
+	
 		</div>
 		
-		<div id="current-post-cover" data-scr="https://raw.githubusercontent.com/sssurou/picgi1/main/img/12.jpg"></div>
+		<div id="current-post-cover" data-scr="https://raw.githubusercontent.com/sssurou/picgi1/main/img/9.jpg"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -422,10 +347,14 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2023/07/27/%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/" title="如何配置主题" rel="prev">
+			<a href="/2023/08/09/mysql%E5%9F%BA%E7%A1%80/" title="mysql基础" rel="prev">
 				&laquo;上一篇
 			</a>
 		
+		
+			<a href="/2023/08/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="计算机基础之操作系统常用命令" rel="next">
+				下一篇&raquo;
+			</a>
 			
 	</span>
 
@@ -441,72 +370,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/08/09/php%E5%9F%BA%E7%A1%80/" title="php基础">
-								php基础			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								八月 9日, 2023				
-							</p>
-							<p class="relate-post-content">
-								
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/08/09/php%E5%9F%BA%E7%A1%80/" title="php基础">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/11.jpg" alt="php基础"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/08/09/mysql%E5%9F%BA%E7%A1%80/" title="mysql基础">
-								mysql基础			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								八月 9日, 2023				
-							</p>
-							<p class="relate-post-content">
-								mysql基础sql简介​		SQL（Structured Query Language 结构化查询语句）是一种特定目的程序语言，用于管理关系数 据库管理系统（RDBMS），或在关系流数据管理系统（RDSMS）中进行流处理。 SQL基...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/08/09/mysql%E5%9F%BA%E7%A1%80/" title="mysql基础">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/10.jpg" alt="mysql基础"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础">
-								数据库基础			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								八月 9日, 2023				
-							</p>
-							<p class="relate-post-content">
-								数据库基础什么是数据库？​		数据库（database，又名电子化的文件柜）就是存储数据的仓库。数据库是一个以某种有结构的有顺序存储的 数据集合，理解数据库的一种最简单的办法是将其想象为一个文件柜。此文件柜是一个 存放数据的物理位置，...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2023/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/9.jpg" alt="数据库基础"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -554,6 +417,50 @@ echo:显示消息
 							<a href="/2023/08/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E4%B9%8BHTTP/" title="计算机基础之HTTP">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/7.jpg" alt="计算机基础之HTTP"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/08/09/php%E5%9F%BA%E7%A1%80/" title="php基础">
+								php基础			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 9日, 2023				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/08/09/php%E5%9F%BA%E7%A1%80/" title="php基础">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/11.jpg" alt="php基础"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/08/09/mysql%E5%9F%BA%E7%A1%80/" title="mysql基础">
+								mysql基础			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								八月 9日, 2023				
+							</p>
+							<p class="relate-post-content">
+								mysql基础sql简介​		SQL（Structured Query Language 结构化查询语句）是一种特定目的程序语言，用于管理关系数 据库管理系统（RDBMS），或在关系流数据管理系统（RDSMS）中进行流处理。 SQL基...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/08/09/mysql%E5%9F%BA%E7%A1%80/" title="mysql基础">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/10.jpg" alt="mysql基础"/>
 							</a>
 						</div>
 					</li>												
@@ -648,6 +555,37 @@ echo:显示消息
 							<a href="/2023/07/27/%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98/" title="如何配置主题">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/20.jpg" alt="如何配置主题"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="做一个只属于自己的博客">
+								做一个只属于自己的博客			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								七月 27日, 2023				
+							</p>
+							<p class="relate-post-content">
+								利用github搭建hexo博客准备前提
+提前安装好(node.js)，打开[https://nodejs.org/en]，选择左边那个
+
+
+
+提前安装好(Git)[https://git-scm.com/downloads]
+
+
+
+...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2023/07/27/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="做一个只属于自己的博客">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/12.jpg" alt="做一个只属于自己的博客"/>
 							</a>
 						</div>
 					</li>												
@@ -766,17 +704,6 @@ echo:显示消息
 </div>
 
 <!-- show math formula -->
-
-	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config(
-			{ 
-				tex2jax: {
-					inlineMath: [['$','$'], ['\\(','\\)']]
-				} 
-			}
-		);
-	</script>
 
 
 
