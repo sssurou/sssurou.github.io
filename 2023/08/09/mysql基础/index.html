@@ -269,7 +269,7 @@
 
 	<a href="/2023/08/09/mysql%E5%9F%BA%E7%A1%80/" itemprop="url">
 		<time datetime="2023-08-09T09:20:03.000Z" itemprop="dateUpdated">
-	  		2023-08-09
+	  		2023-08-10
 	  </time>
 	</a> 
 
@@ -374,6 +374,238 @@
 
 <p><strong>插入行的一部分</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO user(username, password, email)</span><br><span class="line">VALUES (&#x27;admin&#x27;, &#x27;admin&#x27;, &#x27;xxxx@163.com&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="插入查询出来的数据"><a href="#插入查询出来的数据" class="headerlink" title="插入查询出来的数据"></a>插入查询出来的数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO user(username)</span><br><span class="line">SELECT name</span><br><span class="line">FROM account;</span><br></pre></td></tr></table></figure>
+
+<h5 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h5><ul>
+<li><code>UPDATE</code> 语句用于更新表中的记录。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE user</span><br><span class="line">SET username=&#x27;robot&#x27;, password=&#x27;robot&#x27;</span><br><span class="line">WHERE username = &#x27;root&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h5><ul>
+<li><code>DELETE</code> 语句用于删除表中的记录。</li>
+<li><code>TRUNCATE TABLE</code> 可以清空表，也就是删除所有行。</li>
+</ul>
+<p><strong>删除表中的指定数据</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM user</span><br><span class="line">WHERE username = &#x27;robot&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>清空表中的数据</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE user;</span><br></pre></td></tr></table></figure>
+
+<h5 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT：语句用于从数据库中查询数据。</span><br><span class="line">DISTINCT：用于返回唯一不同的值。它作用于所有列，也就是说所有列的值都相同才算相同。</span><br><span class="line">LIMIT：限制返回的行数。可以有两个参数，第一个参数为起始行，从 0 开始；第二个参数为返回的总行数。</span><br><span class="line">ASC ：升序（默认）</span><br><span class="line">DESC ：降序</span><br></pre></td></tr></table></figure>
+
+<p><strong>查询单列</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name</span><br><span class="line">FROM products;</span><br></pre></td></tr></table></figure>
+
+<p><strong>查询多列</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id, prod_name, prod_price</span><br><span class="line">FROM products;</span><br></pre></td></tr></table></figure>
+
+<p><strong>查询所有列</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ELECT *</span><br><span class="line">FROM products;</span><br></pre></td></tr></table></figure>
+
+<p><strong>查询不同的值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT</span><br><span class="line">vend_id FROM products;</span><br></pre></td></tr></table></figure>
+
+<p><strong>限制查询结果</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 返回前 5 行</span><br><span class="line">SELECT * FROM mytable LIMIT 5;</span><br><span class="line">SELECT * FROM mytable LIMIT 0, 5;</span><br><span class="line">-- 返回第 3 ~ 5 行</span><br><span class="line">SELECT * FROM mytable LIMIT 2, 3;</span><br></pre></td></tr></table></figure>
+
+<h5 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h5><p>子查询是嵌套在较大查询中的 SQL 查询。子查询也称为<strong>内部查询</strong>或<strong>内部选择</strong>，而包含子查询的语句也称为<strong>外部查询</strong>或<strong>外部选择</strong>。</p>
+<ul>
+<li><p>子查询可以嵌套在 SELECT，INSERT，UPDATE 或 DELETE 语句内或另一个子查询中。</p>
+</li>
+<li><p>子查询通常会在另一个 SELECT 语句的 WHERE 子句中添加。</p>
+</li>
+<li><p>您可以使用比较运算符，如 &gt;，&lt;，或 &#x3D;。比较运算符也可以是多行运算符，如IN，ANY 或 ALL。</p>
+</li>
+<li><p>子查询必须被圆括号 () 括起来。</p>
+</li>
+<li><p>内部查询首先在其父查询之前执行，以便可以将内部查询的结果传递给外部查询。</p>
+</li>
+</ul>
+<p><strong>子查询的子查询</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT cust_name, cust_contact</span><br><span class="line">FROM customers</span><br><span class="line">WHERE cust_id IN (SELECT cust_id</span><br><span class="line">                  FROM orders</span><br><span class="line">                  WHERE order_num IN (SELECT order_num</span><br><span class="line">                                      FROM orderitems</span><br><span class="line">                                      WHERE prod_id = &#x27;RGAN01&#x27;));</span><br></pre></td></tr></table></figure>
+
+<h5 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h5><ul>
+<li><code>WHERE</code> 子句用于过滤记录，即缩小访问数据的范围。</li>
+<li><code>WHERE</code> 后跟一个返回 <code>true</code> 或 <code>false</code> 的条件。</li>
+<li><code>WHERE</code> 可以与 <code>SELECT</code>，<code>UPDATE</code> 和 <code>DELETE</code> 一起使用。</li>
+<li>可以在 <code>WHERE</code> 子句中使用的操作符</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230810135733501.png" alt="image-20230810135733501"></p>
+<p><strong><code>SELECT</code> 语句中的 <code>WHERE</code> 子句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM Customers</span><br><span class="line">WHERE cust_name = &#x27;Kids Place&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>UPDATE</code> 语句中的 <code>WHERE</code> 子句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE Customers</span><br><span class="line">SET cust_name = &#x27;Jack Jones&#x27;</span><br><span class="line">WHERE cust_name = &#x27;Kids Place&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>DELETE</code> 语句中的 <code>WHERE</code> 子句</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM Customers</span><br><span class="line">WHERE cust_name = &#x27;Kids Place&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="IN-和-BETWEEN"><a href="#IN-和-BETWEEN" class="headerlink" title="IN 和 BETWEEN"></a>IN 和 BETWEEN</h5><ul>
+<li><code>IN</code> 操作符在 <code>WHERE</code> 子句中使用，作用是在指定的几个特定值中任选一个值。</li>
+<li><code>BETWEEN</code> 操作符在 <code>WHERE</code> 子句中使用，作用是选取介于某个范围内的值。</li>
+</ul>
+<p><strong>IN 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM products</span><br><span class="line">WHERE vend_id IN (&#x27;DLL01&#x27;, &#x27;BRS01&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>BETWEEN 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM products</span><br><span class="line">WHERE prod_price BETWEEN 3 AND 5;</span><br></pre></td></tr></table></figure>
+
+<h5 id="AND、OR、NOT"><a href="#AND、OR、NOT" class="headerlink" title="AND、OR、NOT"></a>AND、OR、NOT</h5><ul>
+<li><code>AND</code>、<code>OR</code>、<code>NOT</code> 是用于对过滤条件的逻辑处理指令。</li>
+<li><code>AND</code> 优先级高于 <code>OR</code>，为了明确处理顺序，可以使用 <code>()</code>。</li>
+<li><code>AND</code> 操作符表示左右条件都要满足。</li>
+<li><code>OR</code> 操作符表示左右条件满足任意一个即可。</li>
+<li><code>NOT</code> 操作符用于否定一个条件。</li>
+</ul>
+<p><strong>AND 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id, prod_name, prod_price</span><br><span class="line">FROM products</span><br><span class="line">WHERE vend_id = &#x27;DLL01&#x27; AND prod_price &lt;= 4;</span><br></pre></td></tr></table></figure>
+
+<p><strong>OR 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id, prod_name, prod_price</span><br><span class="line">FROM products</span><br><span class="line">WHERE vend_id = &#x27;DLL01&#x27; OR vend_id = &#x27;BRS01&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>NOT 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM products</span><br><span class="line">WHERE prod_price NOT BETWEEN 3 AND 5;</span><br></pre></td></tr></table></figure>
+
+<h5 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h5><ul>
+<li><code>LIKE</code> 操作符在 <code>WHERE</code> 子句中使用，作用是确定字符串是否匹配模式。</li>
+<li>只有字段是文本值时才使用 <code>LIKE</code>。</li>
+<li><code>LIKE</code> 支持两个通配符匹配选项：<code>%</code> 和 <code>_</code>。</li>
+<li>不要滥用通配符，通配符位于开头处匹配会非常慢。</li>
+<li><code>%</code> 表示任何字符出现任意次数。</li>
+<li><code>_</code> 表示任何字符出现一次。</li>
+</ul>
+<p><strong>% 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id, prod_name, prod_price</span><br><span class="line">FROM products</span><br><span class="line">WHERE prod_name LIKE &#x27;%bean bag%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>_ 示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id, prod_name, prod_price</span><br><span class="line">FROM products</span><br><span class="line">WHERE prod_name LIKE &#x27;__ inch teddy bear&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="连接和组合"><a href="#连接和组合" class="headerlink" title="连接和组合"></a>连接和组合</h4><h5 id="连接（JOIN）"><a href="#连接（JOIN）" class="headerlink" title="连接（JOIN）"></a>连接（JOIN）</h5><ul>
+<li><p>如果一个 JOIN 至少有一个公共字段并且它们之间存在关系，则该 JOIN 可以在两个或多个表上工作。</p>
+</li>
+<li><p>连接用于连接多个表，使用 JOIN 关键字，并且条件语句使用 ON 而不是 WHERE。</p>
+</li>
+<li><p>JOIN 保持基表（结构和数据）不变。</p>
+</li>
+<li><p>JOIN 有两种连接类型：内连接和外连接。</p>
+</li>
+<li><p>内连接又称等值连接，使用 INNER关键字。在没有条件语句的情况下返回笛卡尔积。</p>
+</li>
+<li><p>自连接可以看成内连接的一种，只是连接的表是自身而已。</p>
+</li>
+<li><p>自然连接是把同名列通过 &#x3D; 测试连接起来的，同名列可以有多个。</p>
+</li>
+<li><p>内连接 vs 自然连接</p>
+</li>
+<li><p>内连接提供连接的列，而自然连接自动连接所有同名列。</p>
+</li>
+<li><p>外连接返回一个表中的所有行，并且仅返回来自次表中满足连接条件的那些行，即两个表中的列是相等的。外连接分为左外连接、右外连接、全外连接（Mysql 不支持）。</p>
+</li>
+<li><p>左外连接就是保留左表没有关联的行。</p>
+</li>
+<li><p>右外连接就是保留右表没有关联的行。</p>
+</li>
+<li><p>连接 vs 子查询</p>
+</li>
+<li><p>连接可以替换子查询，并且比子查询的效率一般会更快。</p>
+</li>
+</ul>
+<h5 id="内连接（INNER-JOIN）"><a href="#内连接（INNER-JOIN）" class="headerlink" title="内连接（INNER JOIN）"></a>内连接（INNER JOIN）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT vend_name, prod_name, prod_price</span><br><span class="line">FROM vendors INNER JOIN products</span><br><span class="line">ON vendors.vend_id = products.vend_id;</span><br></pre></td></tr></table></figure>
+
+<h5 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT c1.cust_id, c1.cust_name, c1.cust_contact</span><br><span class="line">FROM customers c1, customers c2</span><br><span class="line">WHERE c1.cust_name = c2.cust_name</span><br><span class="line">AND c2.cust_contact = &#x27;Jim Jones&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="自然连接（NATURAL-JOIN）"><a href="#自然连接（NATURAL-JOIN）" class="headerlink" title="自然连接（NATURAL JOIN）"></a>自然连接（NATURAL JOIN）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM Products</span><br><span class="line">NATURAL JOIN Customers;</span><br></pre></td></tr></table></figure>
+
+<h5 id="左连接（LEFT-JOIN）"><a href="#左连接（LEFT-JOIN）" class="headerlink" title="左连接（LEFT JOIN）"></a>左连接（LEFT JOIN）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT customers.cust_id, orders.order_num</span><br><span class="line">FROM customers LEFT JOIN orders</span><br><span class="line">ON customers.cust_id = orders.cust_id;</span><br></pre></td></tr></table></figure>
+
+<h5 id="右连接（RIGHT-JOIN）"><a href="#右连接（RIGHT-JOIN）" class="headerlink" title="右连接（RIGHT JOIN）"></a>右连接（RIGHT JOIN）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT customers.cust_id, orders.order_num</span><br><span class="line">FROM customers RIGHT JOIN orders</span><br><span class="line">ON customers.cust_id = orders.cust_id;</span><br></pre></td></tr></table></figure>
+
+<h5 id="组合（UNION）"><a href="#组合（UNION）" class="headerlink" title="组合（UNION）"></a>组合（UNION）</h5><ul>
+<li><code>UNION</code> 运算符将两个或更多查询的结果组合起来，并生成一个结果集，其中包含来自 <code>UNION</code> 中参与查询的提取行。</li>
+</ul>
+<p>基本规则</p>
+<ul>
+<li><p>所有查询的列数和列顺序必须相同。</p>
+</li>
+<li><p>每个查询中涉及表的列的数据类型必须相同或兼容。</p>
+</li>
+<li><p>通常返回的列名取自第一个查询。</p>
+</li>
+<li><p>默认会去除相同行，如果需要保留相同行，使用 UNION ALL。</p>
+</li>
+<li><p>只能包含一个 ORDER BY 子句，并且必须位于语句的最后。</p>
+</li>
+</ul>
+<p>应用场景</p>
+<ul>
+<li><p>在一个查询中从不同的表返回结构数据。</p>
+</li>
+<li><p>对一个表执行多个查询，按一个查询返回数据。</p>
+</li>
+</ul>
+<p><strong>组合查询</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT cust_name, cust_contact, cust_email</span><br><span class="line">FROM customers</span><br><span class="line">WHERE cust_state IN (&#x27;IL&#x27;, &#x27;IN&#x27;, &#x27;MI&#x27;)</span><br><span class="line">UNION</span><br><span class="line">SELECT cust_name, cust_contact, cust_email</span><br><span class="line">FROM customers</span><br><span class="line">WHERE cust_name = &#x27;Fun4All&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="JOIN-vs-UNION"><a href="#JOIN-vs-UNION" class="headerlink" title="JOIN vs UNION"></a>JOIN vs UNION</h5><ul>
+<li><code>JOIN</code> 中连接表的列可能不同，但在 <code>UNION</code> 中，所有查询的列数和列顺序必须相同。</li>
+<li><code>UNION</code> 将查询之后的行放在一起（垂直放置），但 <code>JOIN</code> 将查询之后的列放在一起（水平放置），即它构成一个笛卡尔积。</li>
+</ul>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><h5 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h5><p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230810141620234.png" alt="image-20230810141620234"></p>
+<p>其中， <strong>SOUNDEX()</strong> 可以将一个字符串转换为描述其语音表示的字母数字模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM mytable</span><br><span class="line">WHERE SOUNDEX(col1) = SOUNDEX(&#x27;apple&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="日期和时间处理"><a href="#日期和时间处理" class="headerlink" title="日期和时间处理"></a>日期和时间处理</h5><ul>
+<li>日期格式：<code>YYYY-MM-DD</code></li>
+<li>时间格式：<code>HH:MM:SS</code></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230810141727595.png" alt="image-20230810141727595"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT NOW();</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230810141812496.png" alt="image-20230810141812496"></p>
+<h5 id="数值处理"><a href="#数值处理" class="headerlink" title="数值处理"></a>数值处理</h5><p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230810141919006.png" alt="image-20230810141919006"></p>
+<h5 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h5><p><img src="https://raw.githubusercontent.com/sssurou/picgi1/main/img/image-20230810141941889.png" alt="image-20230810141941889"></p>
+<p><code>AVG()</code> 会忽略 NULL 行。</p>
+<p>使用 DISTINCT 可以让汇总函数值汇总不同的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT AVG(DISTINCT col1) AS avg_col</span><br><span class="line">FROM mytable;</span><br></pre></td></tr></table></figure>
+
+<h4 id="排序和分组"><a href="#排序和分组" class="headerlink" title="排序和分组"></a>排序和分组</h4><h5 id="ORDER-BY"><a href="#ORDER-BY" class="headerlink" title="ORDER BY"></a>ORDER BY</h5><ul>
+<li>用于对结果集进行排序。</li>
+<li><code>ASC</code>：升序（默认）</li>
+<li><code>DESC</code> ：降序</li>
+<li>可以按多个列进行排序，并且为每个列指定不同的排序方式</li>
+</ul>
+<p><strong>指定多个列的排序方向</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM products</span><br><span class="line">ORDER BY prod_price DESC, prod_name ASC;</span><br></pre></td></tr></table></figure>
+
+<h5 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h5><p>GROUP BY 子句将记录分组到汇总行中。</p>
+<p>GROUP BY 为每个组返回一个记录。</p>
+<p>GROUP BY 通常还涉及聚合：COUNT，MAX，SUM，AVG 等。</p>
+<p>GROUP BY 可以按一列或多列进行分组。</p>
+<p>GROUP BY 按分组字段进行排序后，ORDER BY 可以以汇总字段来进行排序。</p>
+<p><strong>分组</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT cust_name, COUNT(cust_address) AS addr_num</span><br><span class="line">FROM Customers GROUP BY cust_name;</span><br></pre></td></tr></table></figure>
+
+<p><strong>分组后排序</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT cust_name, COUNT(cust_address) AS addr_num</span><br><span class="line">FROM Customers GROUP BY cust_name</span><br><span class="line">ORDER BY cust_name DESC;</span><br></pre></td></tr></table></figure>
+
+<h5 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h5><ul>
+<li><p><code>HAVING</code> 用于对汇总的 <code>GROUP BY</code> 结果进行过滤。</p>
+</li>
+<li><p><code>HAVING</code> 要求存在一个 <code>GROUP BY</code> 子句。</p>
+</li>
+<li><p><code>WHERE</code> 和 <code>HAVING</code> 可以在相同的查询中。</p>
+</li>
+<li><p><code>HAVING</code> vs <code>WHERE</code></p>
+</li>
+<li><p><code>WHERE</code> 和 <code>HAVING</code> 都是用于过滤。</p>
+</li>
+<li><p><code>HAVING</code> 适用于汇总的组记录；而 WHERE 适用于单个记录。</p>
+</li>
+</ul>
+<p><strong>使用 WHERE 和 HAVING 过滤数据</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT cust_name, COUNT(*) AS num</span><br><span class="line">FROM Customers</span><br><span class="line">WHERE cust_email IS NOT NULL</span><br><span class="line">GROUP BY cust_name</span><br><span class="line">HAVING COUNT(*) &gt;= 1;</span><br></pre></td></tr></table></figure>
 
 	
 		</div>
